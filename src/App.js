@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AddEvents from "./components/AddEvents/AddEvents";
+import Dasboard from "./components/Dasboard/Dasboard";
 
 export default function App() {
   return (
@@ -34,7 +35,7 @@ export default function App() {
               <AddEvents />
             </Route>
             <Route path="/dasboard">
-              <Home />
+              <Dasboard />
             </Route>
           </Switch>
         </div>

@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import Event from '../Event/Event';
+import EventsManage from '../EventsManage/EventsManage';
 
-const Home = () => {
+const Dasboard = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:4000/events')
       .then(res => res.json())
       .then(data => setEvents(data));
-  }, [])
+  }, []);
 
   return (
-    <div className='row'>
+    <div className='rounded row'>
       {
-        events.map(event => < Event key={event._id} event={event} />)
+        events.map(event => <EventsManage key={event._id} event={event} />)
       }
     </div>
   );
 };
 
-export default Home;
+export default Dasboard;
